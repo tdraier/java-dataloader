@@ -4,7 +4,11 @@ apply plugin: 'com.jfrog.bintray'
 publishing {
     repositories {
         maven {
-            url 'http://dl.bintray.com/bbakerman/java-dataloader'
+            url "https://devtools.jahia.com/nexus/content/repositories/thirdparty-snapshots"
+            credentials {
+                username = mavenUser
+                password = mavenPassword
+            }
         }
     }
 }
